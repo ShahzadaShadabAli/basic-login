@@ -70,7 +70,7 @@ export const handleRegistration = async ({ request }) => {
   const email = data.get('email')
   const password = data.get('password')
   try {
-    const response = await axios.post('/register', { name, email, password })
+    const response = await axios.post('https://basic-login-api.vercel.app/register', { name, email, password })
     return response.data
   } catch (error) {
     return { status: false, message: error.message }
