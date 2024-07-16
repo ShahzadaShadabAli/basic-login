@@ -5,6 +5,11 @@ import dotenv from "dotenv"
 
 const app = express()
 app.use(express.json())
+app.use(cors({
+    origin: "https://basic-login-sigma.vercel.app/",
+    methods: ["POST", "GET", "DELETE"],
+    credentials: true
+}))
 
 dotenv.config()
 
