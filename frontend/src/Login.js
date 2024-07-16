@@ -58,7 +58,7 @@ export const handleLogin = async ({ request }) => {
   const email = data.get('email')
   const password = data.get('password')
   try {
-    const response = await axios.post('/login', { email, password })
+    const response = await axios.post('https://basic-login-api.vercel.app/login', { email, password })
     return response.data
   } catch (error) {
     return { status: false, message: error.message }
